@@ -17,7 +17,7 @@
         "@octokit/rest": "^21.0.2",
         "@types/node": "^20.11.0",
         "dotenv": "^16.4.7",
-        "langchain": "^0.3.7",
+        "langchain": "^1.2.28",
         "@typescript-eslint/parser": "6.18.1",
         "@typescript-eslint/types": "6.18.1",
         "@typescript-eslint/typescript-estree": "6.18.1",
