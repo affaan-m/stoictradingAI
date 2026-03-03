@@ -1,0 +1,762 @@
+# Instincts generated from https://github.com/affaan-m/stoictradingAI
+# Generated: 2026-03-03T09:19:16.164Z
+# Version: 2.0
+
+---
+id: stoictradingAI-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 45 chars
+- Based on 200 commits
+
+---
+id: stoictradingAI-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: stoictradingAI-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: stoictradingAI-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: stoictradingAI-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: stoictradingAI-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Test Framework
+
+## Action
+
+Use vitest as the test framework
+
+## Evidence
+
+- Test framework detected: vitest
+- File pattern: *.test.ts
+
+---
+id: stoictradingAI-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: stoictradingAI-test-mocking
+trigger: "when mocking dependencies in tests"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Test Mocking
+
+## Action
+
+Use jest.mock for mocking
+
+## Evidence
+
+- Mocking pattern detected: jest.mock
+- Consistent across test files
+
+---
+id: stoictradingAI-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: no
+
+---
+id: stoictradingAI-workflow-database-migration
+trigger: "when modifying the database schema or adding tables"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Database Migration
+
+## Action
+
+Follow the database-migration workflow:
+1. Create migration file
+2. Update schema definitions
+3. Generate/update types
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: 
+
+---
+id: stoictradingAI-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: packages/client-direct/src/*, agent/src/*, packages/core/src/*
+
+---
+id: stoictradingAI-workflow-dependency-updates
+trigger: "when doing dependency updates"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Dependency Updates
+
+## Action
+
+Follow the dependency-updates workflow:
+1. Detect outdated dependencies
+2. Update package.json files
+3. Update lock files
+4. Commit with detailed changelog
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: packages/*/package.json, pnpm-lock.yaml
+
+---
+id: stoictradingAI-workflow-version-bump
+trigger: "when doing version bump"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Version Bump
+
+## Action
+
+Follow the version-bump workflow:
+1. Update lerna.json version
+2. Update all package.json versions
+3. Commit version changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: lerna.json, packages/*/package.json, agent/package.json
+
+---
+id: stoictradingAI-workflow-plugin-development
+trigger: "when doing plugin development"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Plugin Development
+
+## Action
+
+Follow the plugin-development workflow:
+1. Create plugin directory
+2. Add actions and providers
+3. Configure TypeScript
+4. Add package.json
+5. Set up build tools
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: packages/plugin-*/src/actions/*.ts, packages/plugin-*/src/providers/*.ts, packages/plugin-*/package.json
+
+---
+id: stoictradingAI-workflow-trading-bot-enhancement
+trigger: "when doing trading bot enhancement"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Trading Bot Enhancement
+
+## Action
+
+Follow the trading-bot-enhancement workflow:
+1. Modify trading actions
+2. Update Solana providers
+3. Adjust token handling
+4. Test autonomous behavior
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: packages/plugin-solana/src/actions/*.ts, packages/plugin-solana/src/providers/*.ts, characters/*.character.json
+
+---
+id: stoictradingAI-workflow-merge-develop-to-main
+trigger: "when doing merge develop to main"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Merge Develop To Main
+
+## Action
+
+Follow the merge-develop-to-main workflow:
+1. Merge develop branch
+2. Resolve conflicts
+3. Update documentation
+4. Update API references
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/api/**/*.md, packages/*/src/**/*.ts, .env.example
+
+---
+id: stoictradingAI-workflow-code-cleanup
+trigger: "when doing code cleanup"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Code Cleanup
+
+## Action
+
+Follow the code-cleanup workflow:
+1. Replace console with elizaLogger
+2. Fix unused variables
+3. Add eslint configuration
+4. Update let to const
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: packages/*/src/**/*.ts, packages/*/eslint.config.mjs
+
+---
+id: stoictradingai-camelcase-files
+trigger: "When creating new TypeScript files"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Camelcase Files
+
+## Action
+
+Use camelCase naming convention for file names
+
+## Evidence
+
+- Consistent camelCase pattern in all TypeScript files
+- No kebab-case or snake_case files found in packages
+
+---
+id: stoictradingai-pascalcase-classes
+trigger: "When defining new classes or interfaces"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Pascalcase Classes
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Standard TypeScript convention enforced
+- eslintrc.json configuration present
+
+---
+id: stoictradingai-screaming-snake-constants
+trigger: "When defining constants"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern detected in codebase analysis
+- Standard across all packages
+
+---
+id: stoictradingai-alias-imports
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Alias Imports
+
+## Action
+
+Use alias-style imports consistently
+
+## Evidence
+
+- Import style pattern detected across packages
+- TypeScript configuration supports aliases
+
+---
+id: stoictradingai-mixed-exports
+trigger: "When exporting from modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Mixed Exports
+
+## Action
+
+Use mixed export style (both default and named exports)
+
+## Evidence
+
+- Export style analysis shows mixed pattern
+- Common in plugin architecture
+
+---
+id: stoictradingai-vitest-testing
+trigger: "When writing unit tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Vitest Testing
+
+## Action
+
+Use Vitest framework with *.test.ts file pattern
+
+## Evidence
+
+- vitest.config.ts files present
+- Test pattern *.test.ts detected
+
+---
+id: stoictradingai-jest-mocking
+trigger: "When mocking dependencies in tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Jest Mocking
+
+## Action
+
+Use jest.mock() style mocking
+
+## Evidence
+
+- jest.config.js files in multiple packages
+- Mocking style pattern detected
+
+---
+id: stoictradingai-unit-integration-tests
+trigger: "When creating test suites"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Unit Integration Tests
+
+## Action
+
+Write both unit and integration tests
+
+## Evidence
+
+- Test types analysis shows both unit and integration
+- Comprehensive testing approach
+
+---
+id: stoictradingai-try-catch-errors
+trigger: "When handling errors"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Error handling style analysis
+- No custom error classes detected
+
+---
+id: stoictradingai-conventional-commits
+trigger: "When committing code changes"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Conventional Commits
+
+## Action
+
+Use conventional commit format with prefixes: chore, fix, feat
+
+## Evidence
+
+- Commit examples show consistent prefixes
+- Average length 45 characters matches conventional commits
+
+---
+id: stoictradingai-detailed-commit-messages
+trigger: "When writing commit messages for dependency updates"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Detailed Commit Messages
+
+## Action
+
+Include detailed information about affected directories and update counts
+
+## Evidence
+
+- chore(deps): bump the npm_and_yarn group across 6 directories with 9 updates
+
+---
+id: stoictradingai-bulk-dependency-updates
+trigger: "When Dependabot detects outdated dependencies"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Bulk Dependency Updates
+
+## Action
+
+Update all package.json files and pnpm-lock.yaml in a single commit
+
+## Evidence
+
+- Monthly dependency update pattern
+- Monorepo structure requires synchronized updates
+
+---
+id: stoictradingai-synchronized-versioning
+trigger: "When preparing a new release"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Synchronized Versioning
+
+## Action
+
+Update version in lerna.json and all package.json files simultaneously
+
+## Evidence
+
+- Lerna monorepo setup
+- Multiple package.json files require sync
+
+---
+id: stoictradingai-plugin-structure
+trigger: "When adding support for a new blockchain or service"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Plugin Structure
+
+## Action
+
+Create standardized plugin directory with actions, providers, package.json, and tsconfig.json
+
+## Evidence
+
+- 30+ plugin packages following identical structure
+- packages/plugin-*/src/actions/*.ts pattern
+
+---
+id: stoictradingai-trading-iteration
+trigger: "When enhancing trading capabilities"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Trading Iteration
+
+## Action
+
+Modify Solana actions, update providers, and test autonomous behavior
+
+## Evidence
+
+- Frequent trading-related commits
+- packages/plugin-solana focus
+- Autonomous behavior testing mentions
+
+---
+id: stoictradingai-develop-main-merge
+trigger: "When preparing releases or major updates"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Develop Main Merge
+
+## Action
+
+Merge develop branch to main and update API documentation
+
+## Evidence
+
+- Multiple merge commits from develop to main
+- docs/api updates in merge commits
+
+---
+id: stoictradingai-eliza-logger
+trigger: "When improving code quality"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Eliza Logger
+
+## Action
+
+Replace console.log with elizaLogger for consistent logging
+
+## Evidence
+
+- lint: fix EmbeddingProvider already defined error
+- Code quality improvement pattern
+
+---
+id: stoictradingai-const-over-let
+trigger: "When refactoring variable declarations"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Const Over Let
+
+## Action
+
+Update let declarations to const where appropriate
+
+## Evidence
+
+- Code cleanup patterns detected
+- eslint configuration enforcement
+
+---
+id: stoictradingai-monorepo-tsconfig
+trigger: "When adding new packages to monorepo"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: affaan-m/stoictradingAI
+---
+
+# Stoictradingai Monorepo Tsconfig
+
+## Action
+
+Include individual tsconfig.json for each package
+
+## Evidence
+
+- Every package has its own tsconfig.json
+- Turborepo structure with type-based organization
+
