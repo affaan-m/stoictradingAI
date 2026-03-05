@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "dependencies": {
     "@elizaos/core": "workspace:*",
-    "dompurify": "3.2.2",
+    "dompurify": "3.3.1",
     "tsup": "8.3.5",
     "uuid": "11.0.3",
     "vitest": "2.1.5"
