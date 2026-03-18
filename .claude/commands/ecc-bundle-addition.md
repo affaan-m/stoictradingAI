@@ -10,7 +10,7 @@ Use this workflow when working on **ecc-bundle-addition** in `stoictradingAI`.
 
 ## Goal
 
-Adds or updates a set of configuration, documentation, and control files related to the stoictradingAI ECC bundle.
+Adds or updates a set of configuration and documentation files related to the stoictradingAI ECC (Enterprise Control Center) bundle.
 
 ## Common Files
 
