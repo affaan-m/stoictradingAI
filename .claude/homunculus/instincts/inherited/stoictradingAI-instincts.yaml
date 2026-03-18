@@ -1,0 +1,382 @@
+# Instincts generated from https://github.com/affaan-m/stoictradingAI
+# Generated: 2026-03-18T22:50:38.400Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: stoictradingAI-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Commit Length
+
+## Action
+
+Keep commit messages concise (~45 characters)
+
+## Evidence
+
+- Average commit message length: 45 chars
+- Based on 500 commits
+
+---
+id: stoictradingAI-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: stoictradingAI-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: stoictradingAI-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: stoictradingAI-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: stoictradingAI-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Test Framework
+
+## Action
+
+Use vitest as the test framework
+
+## Evidence
+
+- Test framework detected: vitest
+- File pattern: *.test.ts
+
+---
+id: stoictradingAI-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: stoictradingAI-test-mocking
+trigger: "when mocking dependencies in tests"
+confidence: 0.75
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Test Mocking
+
+## Action
+
+Use jest.mock for mocking
+
+## Evidence
+
+- Mocking pattern detected: jest.mock
+- Consistent across test files
+
+---
+id: stoictradingAI-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: no
+
+---
+id: stoictradingAI-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: packages/client-direct/src/*, agent/src/*, packages/core/src/*
+
+---
+id: stoictradingAI-workflow-dependency-update-multi-package
+trigger: "when doing dependency update multi package"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Dependency Update Multi Package
+
+## Action
+
+Follow the dependency-update-multi-package workflow:
+1. Identify outdated dependencies in multiple packages.
+2. Update version numbers in each affected package.json.
+3. Update lock files (e.g., pnpm-lock.yaml).
+4. Commit all changes with a summary of updated dependencies.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: packages/*/package.json, pnpm-lock.yaml, scripts/*/pnpm-lock.yaml
+
+---
+id: stoictradingAI-workflow-monorepo-version-bump-release
+trigger: "when doing monorepo version bump release"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Monorepo Version Bump Release
+
+## Action
+
+Follow the monorepo-version-bump-release workflow:
+1. Update version numbers in all package.json files in packages/*.
+2. Update root configuration files (e.g., lerna.json).
+3. Commit all changes with a version bump message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: packages/*/package.json, lerna.json, agent/package.json
+
+---
+id: stoictradingAI-workflow-merge-develop-to-main-release
+trigger: "when doing merge develop to main release"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Merge Develop To Main Release
+
+## Action
+
+Follow the merge-develop-to-main-release workflow:
+1. Merge develop into main.
+2. Resolve any conflicts.
+3. Update documentation and configuration files as needed.
+4. Commit the merge with a summary message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .env.example, .github/workflows/*, agent/*
+
+---
+id: stoictradingAI-workflow-add-or-update-feature-in-plugin
+trigger: "when doing add or update feature in plugin"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Add Or Update Feature In Plugin
+
+## Action
+
+Follow the add-or-update-feature-in-plugin workflow:
+1. Edit or add files in packages/plugin-*/src/actions/ and related providers or utils.
+2. Update package.json if dependencies or scripts change.
+3. Optionally update documentation or configuration.
+4. Commit changes with a descriptive message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: packages/plugin-*/src/actions/*.ts, packages/plugin-*/src/providers/*.ts, packages/plugin-*/src/index.ts
+
+---
+id: stoictradingAI-workflow-add-or-update-api-endpoint
+trigger: "when doing add or update api endpoint"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Add Or Update Api Endpoint
+
+## Action
+
+Follow the add-or-update-api-endpoint workflow:
+1. Edit or add endpoint logic in packages/client-*/src/index.ts.
+2. Add error handling and response formatting.
+3. Commit with a message describing the endpoint.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: packages/client-*/src/index.ts
+
+---
+id: stoictradingAI-workflow-documentation-and-config-update-for-new-feature
+trigger: "when doing documentation and config update for new feature"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Documentation And Config Update For New Feature
+
+## Action
+
+Follow the documentation-and-config-update-for-new-feature workflow:
+1. Update docs/api/enumerations/ModelProviderName.md and related docs.
+2. Edit docs/docs/guides/configuration.md and docs/docs/quickstart.md.
+3. Commit with a message summarizing the documentation update.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/api/enumerations/ModelProviderName.md, docs/api/type-aliases/Models.md, docs/docs/api/enumerations/ModelProviderName.md
+
+---
+id: stoictradingAI-workflow-linting-and-code-cleanup
+trigger: "when doing linting and code cleanup"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/affaan-m/stoictradingAI
+---
+
+# StoictradingAI Workflow Linting And Code Cleanup
+
+## Action
+
+Follow the linting-and-code-cleanup workflow:
+1. Identify linting issues (e.g., unused vars, let/const).
+2. Apply fixes across relevant files.
+3. Add or update eslint configuration if needed.
+4. Commit with a message describing the cleanup.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: packages/*/src/**/*.ts, packages/*/eslint.config.mjs, packages/*/package.json
+
