@@ -14,7 +14,7 @@ Standard feature implementation workflow
 
 ## Common Files
 
-- `packages/plugin-solana/src/actions/*`
+- Inspect the files touched by the related commits before editing.
 
 ## Suggested Sequence
 
