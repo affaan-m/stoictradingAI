@@ -48,7 +48,7 @@ Follow these commit message conventions based on 500 analyzed commits.
 *Commit message example*
 
 ```text
-feat: add stoictradingAI ECC bundle (.claude/commands/multi-package-dependency-update.md)
+feat: add stoictradingAI ECC bundle (.claude/commands/command-documentation-addition.md)
 ```
 
 *Commit message example*
@@ -90,7 +90,7 @@ feat: add stoictradingAI ECC bundle (.claude/commands/feature-development.md)
 *Commit message example*
 
 ```text
-feat: add stoictradingAI ECC bundle (.claude/rules/stoictradingAI-guardrails.md)
+feat: add stoictradingAI ECC bundle (.claude/enterprise/controls.md)
 ```
 
 ## Architecture
@@ -331,110 +331,197 @@ Standard feature implementation workflow
 
 **Example commit sequence**:
 ```
-feat: add stoictradingAI ECC bundle (.claude/homunculus/instincts/inherited/stoictradingAI-instincts.yaml)
-feat: add stoictradingAI ECC bundle (.claude/research/stoictradingAI-research-playbook.md)
+feat: add stoictradingAI ECC bundle (.codex/agents/docs-researcher.toml)
 feat: add stoictradingAI ECC bundle (.claude/rules/stoictradingAI-guardrails.md)
+feat: add stoictradingAI ECC bundle (.claude/research/stoictradingAI-research-playbook.md)
 ```
 
 ### Ecc Bundle Addition
 
-Adds or updates the stoictradingAI ECC bundle, including commands, rules, skills, team config, research playbook, and agent definitions.
+Adds a new ECC (Enterprise Control Center) bundle for stoictradingAI, including configuration, documentation, skills, rules, research playbooks, and agent definitions.
 
-**Frequency**: ~5 times per month
+**Frequency**: ~3 times per month
 
 **Steps**:
-1. Add or update .claude/commands/*.md files (such as feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, ecc-bundle-addition.md, dependency-update-multi-package.md, monorepo-version-bump-release.md)
-2. Add or update .claude/rules/stoictradingAI-guardrails.md
-3. Add or update .claude/skills/stoictradingAI/SKILL.md and/or .agents/skills/stoictradingAI/SKILL.md
-4. Add or update .claude/identity.json
-5. Add or update .claude/ecc-tools.json
-6. Add or update .claude/team/stoictradingAI-team-config.json
-7. Add or update .claude/research/stoictradingAI-research-playbook.md
-8. Add or update .claude/enterprise/controls.md
-9. Add or update agent definition files such as .codex/agents/*.toml and .agents/skills/stoictradingAI/agents/openai.yaml
-10. Optionally add .claude/homunculus/instincts/inherited/stoictradingAI-instincts.yaml
+1. Add or update .claude/commands/ecc-bundle-addition.md
+2. Add or update .claude/commands/feature-development.md
+3. Add or update .claude/commands/monorepo-version-bump.md and/or multi-package-dependency-update.md
+4. Add or update .claude/enterprise/controls.md
+5. Add or update .claude/team/stoictradingAI-team-config.json
+6. Add or update .claude/research/stoictradingAI-research-playbook.md
+7. Add or update .claude/rules/stoictradingAI-guardrails.md
+8. Add or update .claude/identity.json
+9. Add or update .claude/skills/stoictradingAI/SKILL.md
+10. Add or update .agents/skills/stoictradingAI/SKILL.md
+11. Add or update .agents/skills/stoictradingAI/agents/openai.yaml
+12. Add or update .codex/agents/docs-researcher.toml
+13. Add or update .codex/agents/reviewer.toml
+14. Add or update .codex/agents/explorer.toml
+15. Add or update .claude/ecc-tools.json
 
 **Files typically involved**:
-- `.claude/commands/*.md`
-- `.claude/rules/stoictradingAI-guardrails.md`
-- `.claude/skills/stoictradingAI/SKILL.md`
-- `.agents/skills/stoictradingAI/SKILL.md`
-- `.claude/identity.json`
-- `.claude/ecc-tools.json`
+- `.claude/commands/ecc-bundle-addition.md`
+- `.claude/commands/feature-development.md`
+- `.claude/commands/monorepo-version-bump.md`
+- `.claude/commands/multi-package-dependency-update.md`
+- `.claude/enterprise/controls.md`
 - `.claude/team/stoictradingAI-team-config.json`
 - `.claude/research/stoictradingAI-research-playbook.md`
-- `.claude/enterprise/controls.md`
-- `.codex/agents/*.toml`
+- `.claude/rules/stoictradingAI-guardrails.md`
+- `.claude/identity.json`
+- `.claude/skills/stoictradingAI/SKILL.md`
+- `.agents/skills/stoictradingAI/SKILL.md`
 - `.agents/skills/stoictradingAI/agents/openai.yaml`
-- `.claude/homunculus/instincts/inherited/stoictradingAI-instincts.yaml`
+- `.codex/agents/docs-researcher.toml`
+- `.codex/agents/reviewer.toml`
+- `.codex/agents/explorer.toml`
+- `.claude/ecc-tools.json`
 
 **Example commit sequence**:
 ```
-Add or update .claude/commands/*.md files (such as feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, ecc-bundle-addition.md, dependency-update-multi-package.md, monorepo-version-bump-release.md)
-Add or update .claude/rules/stoictradingAI-guardrails.md
-Add or update .claude/skills/stoictradingAI/SKILL.md and/or .agents/skills/stoictradingAI/SKILL.md
-Add or update .claude/identity.json
-Add or update .claude/ecc-tools.json
+Add or update .claude/commands/ecc-bundle-addition.md
+Add or update .claude/commands/feature-development.md
+Add or update .claude/commands/monorepo-version-bump.md and/or multi-package-dependency-update.md
+Add or update .claude/enterprise/controls.md
 Add or update .claude/team/stoictradingAI-team-config.json
 Add or update .claude/research/stoictradingAI-research-playbook.md
-Add or update .claude/enterprise/controls.md
-Add or update agent definition files such as .codex/agents/*.toml and .agents/skills/stoictradingAI/agents/openai.yaml
-Optionally add .claude/homunculus/instincts/inherited/stoictradingAI-instincts.yaml
+Add or update .claude/rules/stoictradingAI-guardrails.md
+Add or update .claude/identity.json
+Add or update .claude/skills/stoictradingAI/SKILL.md
+Add or update .agents/skills/stoictradingAI/SKILL.md
+Add or update .agents/skills/stoictradingAI/agents/openai.yaml
+Add or update .codex/agents/docs-researcher.toml
+Add or update .codex/agents/reviewer.toml
+Add or update .codex/agents/explorer.toml
+Add or update .claude/ecc-tools.json
 ```
 
 ### Command Documentation Addition
 
-Adds or updates markdown documentation for ECC-related commands.
+Adds or updates documentation for commands related to stoictradingAI ECC bundles.
 
-**Frequency**: ~6 times per month
+**Frequency**: ~2 times per month
 
 **Steps**:
-1. Create or update a markdown file in .claude/commands/ (e.g., feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, ecc-bundle-addition.md, dependency-update-multi-package.md, monorepo-version-bump-release.md)
+1. Add or update .claude/commands/command-documentation-addition.md
 
 **Files typically involved**:
-- `.claude/commands/*.md`
+- `.claude/commands/command-documentation-addition.md`
 
 **Example commit sequence**:
 ```
-Create or update a markdown file in .claude/commands/ (e.g., feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, ecc-bundle-addition.md, dependency-update-multi-package.md, monorepo-version-bump-release.md)
+Add or update .claude/commands/command-documentation-addition.md
 ```
 
-### Skill Documentation Addition
+### Guardrails Update
 
-Adds or updates documentation for a stoictradingAI skill.
+Adds or updates guardrails/rules for stoictradingAI ECC bundle to enforce policies or constraints.
 
 **Frequency**: ~3 times per month
 
 **Steps**:
-1. Create or update SKILL.md in .agents/skills/stoictradingAI/ and/or .claude/skills/stoictradingAI/
+1. Add or update .claude/rules/stoictradingAI-guardrails.md
 
 **Files typically involved**:
-- `.agents/skills/stoictradingAI/SKILL.md`
+- `.claude/rules/stoictradingAI-guardrails.md`
+
+**Example commit sequence**:
+```
+Add or update .claude/rules/stoictradingAI-guardrails.md
+```
+
+### Research Playbook Update
+
+Adds or updates the research playbook for stoictradingAI ECC bundle.
+
+**Frequency**: ~3 times per month
+
+**Steps**:
+1. Add or update .claude/research/stoictradingAI-research-playbook.md
+
+**Files typically involved**:
+- `.claude/research/stoictradingAI-research-playbook.md`
+
+**Example commit sequence**:
+```
+Add or update .claude/research/stoictradingAI-research-playbook.md
+```
+
+### Team Config Update
+
+Adds or updates the team configuration for stoictradingAI ECC bundle.
+
+**Frequency**: ~3 times per month
+
+**Steps**:
+1. Add or update .claude/team/stoictradingAI-team-config.json
+
+**Files typically involved**:
+- `.claude/team/stoictradingAI-team-config.json`
+
+**Example commit sequence**:
+```
+Add or update .claude/team/stoictradingAI-team-config.json
+```
+
+### Identity Update
+
+Adds or updates the identity configuration for stoictradingAI ECC bundle.
+
+**Frequency**: ~3 times per month
+
+**Steps**:
+1. Add or update .claude/identity.json
+
+**Files typically involved**:
+- `.claude/identity.json`
+
+**Example commit sequence**:
+```
+Add or update .claude/identity.json
+```
+
+### Skill Documentation Update
+
+Adds or updates skill documentation for stoictradingAI ECC bundle in both .claude and .agents directories.
+
+**Frequency**: ~3 times per month
+
+**Steps**:
+1. Add or update .claude/skills/stoictradingAI/SKILL.md
+2. Add or update .agents/skills/stoictradingAI/SKILL.md
+
+**Files typically involved**:
 - `.claude/skills/stoictradingAI/SKILL.md`
+- `.agents/skills/stoictradingAI/SKILL.md`
 
 **Example commit sequence**:
 ```
-Create or update SKILL.md in .agents/skills/stoictradingAI/ and/or .claude/skills/stoictradingAI/
+Add or update .claude/skills/stoictradingAI/SKILL.md
+Add or update .agents/skills/stoictradingAI/SKILL.md
 ```
 
-### Agent Definition Update
+### Codex Agent Definition Update
 
-Adds or updates agent definition files for stoictradingAI.
+Adds or updates agent definitions for stoictradingAI ECC bundle in the .codex/agents directory.
 
 **Frequency**: ~3 times per month
 
 **Steps**:
-1. Create or update .codex/agents/*.toml files (e.g., docs-researcher.toml, reviewer.toml, explorer.toml)
-2. Create or update .agents/skills/stoictradingAI/agents/openai.yaml
+1. Add or update .codex/agents/docs-researcher.toml
+2. Add or update .codex/agents/reviewer.toml
+3. Add or update .codex/agents/explorer.toml
 
 **Files typically involved**:
-- `.codex/agents/*.toml`
-- `.agents/skills/stoictradingAI/agents/openai.yaml`
+- `.codex/agents/docs-researcher.toml`
+- `.codex/agents/reviewer.toml`
+- `.codex/agents/explorer.toml`
 
 **Example commit sequence**:
 ```
-Create or update .codex/agents/*.toml files (e.g., docs-researcher.toml, reviewer.toml, explorer.toml)
-Create or update .agents/skills/stoictradingAI/agents/openai.yaml
+Add or update .codex/agents/docs-researcher.toml
+Add or update .codex/agents/reviewer.toml
+Add or update .codex/agents/explorer.toml
 ```
 
 
