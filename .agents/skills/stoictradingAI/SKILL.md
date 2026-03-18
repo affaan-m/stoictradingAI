@@ -35,12 +35,12 @@ Follow these commit message conventions based on 500 analyzed commits.
 ### Prefixes Used
 
 - `chore`
-- `fix`
 - `feat`
+- `fix`
 
 ### Message Guidelines
 
-- Average message length: ~45 characters
+- Average message length: ~47 characters
 - Keep first line concise and descriptive
 - Use imperative mood ("Add feature" not "Added feature")
 
@@ -48,13 +48,13 @@ Follow these commit message conventions based on 500 analyzed commits.
 *Commit message example*
 
 ```text
-chore(deps): bump the npm_and_yarn group across 8 directories with 10 updates
+feat: add stoictradingAI ECC bundle (.claude/commands/monorepo-version-bump-release.md)
 ```
 
 *Commit message example*
 
 ```text
-feat: update trading bot with transaction explorer URL and stoic quotes
+chore(deps): bump the npm_and_yarn group across 8 directories with 10 updates
 ```
 
 *Commit message example*
@@ -78,19 +78,19 @@ revert: packages/client-github/src/index.ts to match develop
 *Commit message example*
 
 ```text
-Initial commit
+feat: add stoictradingAI ECC bundle (.claude/commands/dependency-update-multi-package.md)
 ```
 
 *Commit message example*
 
 ```text
-Adjusted trading logic and post on tweeter after making a trade
+feat: add stoictradingAI ECC bundle (.claude/commands/feature-development.md)
 ```
 
 *Commit message example*
 
 ```text
-Tested autonomous behavior, fixed issue  and added delays
+feat: add stoictradingAI ECC bundle (.claude/enterprise/controls.md)
 ```
 
 ## Architecture
@@ -322,7 +322,7 @@ These workflows were detected from analyzing commit patterns.
 
 Standard feature implementation workflow
 
-**Frequency**: ~5 times per month
+**Frequency**: ~12 times per month
 
 **Steps**:
 1. Add feature implementation
@@ -330,108 +330,75 @@ Standard feature implementation workflow
 3. Update documentation
 
 **Files typically involved**:
-- `packages/client-direct/src/*`
-- `agent/src/*`
-- `packages/core/src/*`
-- `**/api/**`
+- `packages/plugin-solana/src/actions/*`
 
 **Example commit sequence**:
 ```
-Add Livepeer model and configuration details to documentation
-Update package.json with build-docker command
-feat: add /:agentId/speak endpoint for text-to-speech functionality
+chore: add eslint support
+chore: let -> const
+chore: console -> elizaLogger
 ```
 
-### Dependency Update Multi Package
+### Monorepo Version Bump
 
-Updates dependencies across multiple package.json files in various packages, often via automated tools like dependabot.
+Bump the version across all packages in the monorepo, usually for a new release or pre-release.
 
 **Frequency**: ~2 times per month
 
 **Steps**:
-1. Identify outdated dependencies in multiple packages.
-2. Update version numbers in each affected package.json.
-3. Update lock files (e.g., pnpm-lock.yaml).
-4. Commit all changes with a summary of updated dependencies.
+1. Update the version in package.json for all packages (agent, client, docs, all packages in packages/)
+2. Update lerna.json with the new version
+3. Commit all updated package.json and lerna.json files
 
 **Files typically involved**:
-- `packages/*/package.json`
-- `pnpm-lock.yaml`
-- `scripts/*/pnpm-lock.yaml`
-
-**Example commit sequence**:
-```
-Identify outdated dependencies in multiple packages.
-Update version numbers in each affected package.json.
-Update lock files (e.g., pnpm-lock.yaml).
-Commit all changes with a summary of updated dependencies.
-```
-
-### Monorepo Version Bump Release
-
-Bumps the version number for all packages in the monorepo, often as part of a release process.
-
-**Frequency**: ~1 times per month
-
-**Steps**:
-1. Update version numbers in all package.json files in packages/*.
-2. Update root configuration files (e.g., lerna.json).
-3. Commit all changes with a version bump message.
-
-**Files typically involved**:
-- `packages/*/package.json`
-- `lerna.json`
 - `agent/package.json`
 - `client/package.json`
 - `docs/package.json`
+- `lerna.json`
+- `packages/*/package.json`
 
 **Example commit sequence**:
 ```
-Update version numbers in all package.json files in packages/*.
-Update root configuration files (e.g., lerna.json).
-Commit all changes with a version bump message.
+Update the version in package.json for all packages (agent, client, docs, all packages in packages/)
+Update lerna.json with the new version
+Commit all updated package.json and lerna.json files
 ```
 
-### Merge Develop To Main Release
+### Multi Package Dependency Update
 
-Merges the develop branch into main, bringing all accumulated changes, including docs, configs, and code, into production.
+Update dependencies across multiple package.json files in different packages, often using an automated tool like dependabot.
 
 **Frequency**: ~2 times per month
 
 **Steps**:
-1. Merge develop into main.
-2. Resolve any conflicts.
-3. Update documentation and configuration files as needed.
-4. Commit the merge with a summary message.
+1. Update dependencies in package.json for affected packages
+2. Update lockfile (pnpm-lock.yaml or similar)
+3. Commit all changed package.json and lockfile files
 
 **Files typically involved**:
-- `.env.example`
-- `.github/workflows/*`
-- `agent/*`
-- `client/*`
-- `docs/*`
-- `packages/*`
+- `packages/*/package.json`
+- `scripts/*/pnpm-lock.yaml`
 - `pnpm-lock.yaml`
 
 **Example commit sequence**:
 ```
-Merge develop into main.
-Resolve any conflicts.
-Update documentation and configuration files as needed.
-Commit the merge with a summary message.
+Update dependencies in package.json for affected packages
+Update lockfile (pnpm-lock.yaml or similar)
+Commit all changed package.json and lockfile files
 ```
 
-### Add Or Update Feature In Plugin
+### Plugin Feature Development
 
-Implements or updates a feature in a plugin package, often involving multiple files within the plugin and sometimes related documentation.
+Add or modify features in a plugin package, typically involving multiple files within the plugin's directory.
 
 **Frequency**: ~2 times per month
 
 **Steps**:
-1. Edit or add files in packages/plugin-*/src/actions/ and related providers or utils.
-2. Update package.json if dependencies or scripts change.
-3. Optionally update documentation or configuration.
-4. Commit changes with a descriptive message.
+1. Edit or add files in packages/plugin-*/src/actions/*.ts
+2. Edit or add files in packages/plugin-*/src/providers/*.ts
+3. Edit or add files in packages/plugin-*/src/index.ts
+4. Update package.json or config files if needed
+5. Update or add tests if present
 
 **Files typically involved**:
 - `packages/plugin-*/src/actions/*.ts`
@@ -441,82 +408,33 @@ Implements or updates a feature in a plugin package, often involving multiple fi
 
 **Example commit sequence**:
 ```
-Edit or add files in packages/plugin-*/src/actions/ and related providers or utils.
-Update package.json if dependencies or scripts change.
-Optionally update documentation or configuration.
-Commit changes with a descriptive message.
+Edit or add files in packages/plugin-*/src/actions/*.ts
+Edit or add files in packages/plugin-*/src/providers/*.ts
+Edit or add files in packages/plugin-*/src/index.ts
+Update package.json or config files if needed
+Update or add tests if present
 ```
 
-### Add Or Update Api Endpoint
+### Lint And Code Cleanup
 
-Adds or updates an API endpoint in a client package, typically by modifying the src/index.ts or similar entrypoint.
+Apply linting fixes and code cleanup (e.g., remove unused variables/imports, change let to const, replace console with logger) in plugin or core files.
 
 **Frequency**: ~2 times per month
 
 **Steps**:
-1. Edit or add endpoint logic in packages/client-*/src/index.ts.
-2. Add error handling and response formatting.
-3. Commit with a message describing the endpoint.
+1. Identify linting/code issues (unused vars, let->const, console->logger)
+2. Edit affected files to fix issues
+3. Commit the changes
 
 **Files typically involved**:
-- `packages/client-*/src/index.ts`
+- `packages/plugin-*/src/**/*.ts`
+- `packages/plugin-*/src/**/*.js`
 
 **Example commit sequence**:
 ```
-Edit or add endpoint logic in packages/client-*/src/index.ts.
-Add error handling and response formatting.
-Commit with a message describing the endpoint.
-```
-
-### Documentation And Config Update For New Feature
-
-Updates documentation and configuration files to reflect new models, providers, or features.
-
-**Frequency**: ~2 times per month
-
-**Steps**:
-1. Update docs/api/enumerations/ModelProviderName.md and related docs.
-2. Edit docs/docs/guides/configuration.md and docs/docs/quickstart.md.
-3. Commit with a message summarizing the documentation update.
-
-**Files typically involved**:
-- `docs/api/enumerations/ModelProviderName.md`
-- `docs/api/type-aliases/Models.md`
-- `docs/docs/api/enumerations/ModelProviderName.md`
-- `docs/docs/api/type-aliases/Models.md`
-- `docs/docs/guides/configuration.md`
-- `docs/docs/quickstart.md`
-
-**Example commit sequence**:
-```
-Update docs/api/enumerations/ModelProviderName.md and related docs.
-Edit docs/docs/guides/configuration.md and docs/docs/quickstart.md.
-Commit with a message summarizing the documentation update.
-```
-
-### Linting And Code Cleanup
-
-Performs code cleanup for linting, such as changing let to const, removing unused variables/imports, or adding eslint support.
-
-**Frequency**: ~2 times per month
-
-**Steps**:
-1. Identify linting issues (e.g., unused vars, let/const).
-2. Apply fixes across relevant files.
-3. Add or update eslint configuration if needed.
-4. Commit with a message describing the cleanup.
-
-**Files typically involved**:
-- `packages/*/src/**/*.ts`
-- `packages/*/eslint.config.mjs`
-- `packages/*/package.json`
-
-**Example commit sequence**:
-```
-Identify linting issues (e.g., unused vars, let/const).
-Apply fixes across relevant files.
-Add or update eslint configuration if needed.
-Commit with a message describing the cleanup.
+Identify linting/code issues (unused vars, let->const, console->logger)
+Edit affected files to fix issues
+Commit the changes
 ```
 
 
