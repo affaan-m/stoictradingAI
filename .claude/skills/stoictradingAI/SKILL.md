@@ -34,13 +34,13 @@ Follow these commit message conventions based on 500 analyzed commits.
 
 ### Prefixes Used
 
-- `chore`
 - `feat`
+- `chore`
 - `fix`
 
 ### Message Guidelines
 
-- Average message length: ~47 characters
+- Average message length: ~48 characters
 - Keep first line concise and descriptive
 - Use imperative mood ("Add feature" not "Added feature")
 
@@ -48,7 +48,7 @@ Follow these commit message conventions based on 500 analyzed commits.
 *Commit message example*
 
 ```text
-feat: add stoictradingAI ECC bundle (.claude/commands/monorepo-version-bump-release.md)
+feat: add stoictradingAI ECC bundle (.claude/commands/multi-package-dependency-update.md)
 ```
 
 *Commit message example*
@@ -78,7 +78,7 @@ revert: packages/client-github/src/index.ts to match develop
 *Commit message example*
 
 ```text
-feat: add stoictradingAI ECC bundle (.claude/commands/dependency-update-multi-package.md)
+feat: add stoictradingAI ECC bundle (.claude/commands/monorepo-version-bump.md)
 ```
 
 *Commit message example*
@@ -322,7 +322,7 @@ These workflows were detected from analyzing commit patterns.
 
 Standard feature implementation workflow
 
-**Frequency**: ~12 times per month
+**Frequency**: ~20 times per month
 
 **Steps**:
 1. Add feature implementation
@@ -334,21 +334,53 @@ Standard feature implementation workflow
 
 **Example commit sequence**:
 ```
-chore: add eslint support
-chore: let -> const
-chore: console -> elizaLogger
+feat: update trading bot with transaction explorer URL and stoic quotes
+Initial commit
+chore(deps): bump the npm_and_yarn group across 8 directories with 10 updates
+```
+
+### Ecc Bundle Addition
+
+Adds a new ECC (Enterprise Control Center) bundle or configuration/documentation file for stoictradingAI, typically in .claude, .codex, or .agents directories.
+
+**Frequency**: ~10 times per month
+
+**Steps**:
+1. Create or update a file in .claude/commands, .claude/enterprise, .claude/team, .claude/research, .claude/rules, .claude/skills, .codex/agents, .codex, or .agents/skills/stoictradingAI.
+2. Commit the new or updated file with a message referencing 'ECC bundle'.
+
+**Files typically involved**:
+- `.claude/commands/*.md`
+- `.claude/enterprise/*.md`
+- `.claude/team/*.json`
+- `.claude/research/*.md`
+- `.claude/rules/*.md`
+- `.claude/skills/stoictradingAI/SKILL.md`
+- `.claude/ecc-tools.json`
+- `.claude/identity.json`
+- `.claude/homunculus/instincts/inherited/*.yaml`
+- `.codex/agents/*.toml`
+- `.codex/AGENTS.md`
+- `.codex/config.toml`
+- `.agents/skills/stoictradingAI/SKILL.md`
+- `.agents/skills/stoictradingAI/agents/*.yaml`
+
+**Example commit sequence**:
+```
+Create or update a file in .claude/commands, .claude/enterprise, .claude/team, .claude/research, .claude/rules, .claude/skills, .codex/agents, .codex, or .agents/skills/stoictradingAI.
+Commit the new or updated file with a message referencing 'ECC bundle'.
 ```
 
 ### Monorepo Version Bump
 
-Bump the version across all packages in the monorepo, usually for a new release or pre-release.
+Bumps the version across multiple package.json files in a monorepo, including lerna.json and lock files.
 
 **Frequency**: ~2 times per month
 
 **Steps**:
-1. Update the version in package.json for all packages (agent, client, docs, all packages in packages/)
-2. Update lerna.json with the new version
-3. Commit all updated package.json and lerna.json files
+1. Update the version in all package.json files under packages/ and root-level package.json files.
+2. Update lerna.json version.
+3. Commit all updated package.json and lerna.json files, often with a 'bump version' message.
 
 **Files typically involved**:
 - `agent/package.json`
@@ -359,21 +391,21 @@ Bump the version across all packages in the monorepo, usually for a new release 
 
 **Example commit sequence**:
 ```
-Update the version in package.json for all packages (agent, client, docs, all packages in packages/)
-Update lerna.json with the new version
-Commit all updated package.json and lerna.json files
+Update the version in all package.json files under packages/ and root-level package.json files.
+Update lerna.json version.
+Commit all updated package.json and lerna.json files, often with a 'bump version' message.
 ```
 
 ### Multi Package Dependency Update
 
-Update dependencies across multiple package.json files in different packages, often using an automated tool like dependabot.
+Updates dependencies across multiple package.json files, often as a result of automated tools like dependabot.
 
 **Frequency**: ~2 times per month
 
 **Steps**:
-1. Update dependencies in package.json for affected packages
-2. Update lockfile (pnpm-lock.yaml or similar)
-3. Commit all changed package.json and lockfile files
+1. Update dependencies in package.json files across multiple packages.
+2. Update lock files if necessary (e.g., pnpm-lock.yaml).
+3. Commit all updated files with a detailed changelog in the commit message.
 
 **Files typically involved**:
 - `packages/*/package.json`
@@ -382,59 +414,9 @@ Update dependencies across multiple package.json files in different packages, of
 
 **Example commit sequence**:
 ```
-Update dependencies in package.json for affected packages
-Update lockfile (pnpm-lock.yaml or similar)
-Commit all changed package.json and lockfile files
-```
-
-### Plugin Feature Development
-
-Add or modify features in a plugin package, typically involving multiple files within the plugin's directory.
-
-**Frequency**: ~2 times per month
-
-**Steps**:
-1. Edit or add files in packages/plugin-*/src/actions/*.ts
-2. Edit or add files in packages/plugin-*/src/providers/*.ts
-3. Edit or add files in packages/plugin-*/src/index.ts
-4. Update package.json or config files if needed
-5. Update or add tests if present
-
-**Files typically involved**:
-- `packages/plugin-*/src/actions/*.ts`
-- `packages/plugin-*/src/providers/*.ts`
-- `packages/plugin-*/src/index.ts`
-- `packages/plugin-*/package.json`
-
-**Example commit sequence**:
-```
-Edit or add files in packages/plugin-*/src/actions/*.ts
-Edit or add files in packages/plugin-*/src/providers/*.ts
-Edit or add files in packages/plugin-*/src/index.ts
-Update package.json or config files if needed
-Update or add tests if present
-```
-
-### Lint And Code Cleanup
-
-Apply linting fixes and code cleanup (e.g., remove unused variables/imports, change let to const, replace console with logger) in plugin or core files.
-
-**Frequency**: ~2 times per month
-
-**Steps**:
-1. Identify linting/code issues (unused vars, let->const, console->logger)
-2. Edit affected files to fix issues
-3. Commit the changes
-
-**Files typically involved**:
-- `packages/plugin-*/src/**/*.ts`
-- `packages/plugin-*/src/**/*.js`
-
-**Example commit sequence**:
-```
-Identify linting/code issues (unused vars, let->const, console->logger)
-Edit affected files to fix issues
-Commit the changes
+Update dependencies in package.json files across multiple packages.
+Update lock files if necessary (e.g., pnpm-lock.yaml).
+Commit all updated files with a detailed changelog in the commit message.
 ```
 
 
