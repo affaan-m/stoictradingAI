@@ -9,7 +9,7 @@
   "commandFiles": [
     ".claude/commands/feature-development.md",
     ".claude/commands/ecc-bundle-addition.md",
-    ".claude/commands/command-documentation-addition.md"
+    ".claude/commands/team-config-update.md"
   ],
-  "updatedAt": "2026-03-18T22:55:25.224Z"
+  "updatedAt": "2026-03-18T22:56:10.932Z"
 }
