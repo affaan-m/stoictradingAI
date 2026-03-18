@@ -14,10 +14,7 @@ Standard feature implementation workflow
 
 ## Common Files
 
-- `packages/client-direct/src/*`
-- `agent/src/*`
-- `packages/core/src/*`
-- `**/api/**`
+- `packages/plugin-solana/src/actions/*`
 
 ## Suggested Sequence
 
