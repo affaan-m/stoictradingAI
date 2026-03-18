@@ -8,8 +8,8 @@
   ],
   "commandFiles": [
     ".claude/commands/feature-development.md",
-    ".claude/commands/monorepo-version-bump.md",
-    ".claude/commands/multi-package-dependency-update.md"
+    ".claude/commands/ecc-bundle-addition.md",
+    ".claude/commands/monorepo-version-bump.md"
   ],
-  "updatedAt": "2026-03-18T22:51:14.718Z"
+  "updatedAt": "2026-03-18T22:51:56.014Z"
 }
