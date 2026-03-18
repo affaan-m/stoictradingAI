@@ -26,7 +26,7 @@ Updates the team configuration for stoictradingAI.
 ## Typical Commit Signals
 
 - Edit .claude/team/stoictradingAI-team-config.json
-- Commit with a message referencing ECC bundle or team config
+- Commit changes with relevant message
 
 ## Notes
 
