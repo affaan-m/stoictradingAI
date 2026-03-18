@@ -10,12 +10,12 @@ Use this workflow when working on **ecc-bundle-addition** in `stoictradingAI`.
 
 ## Goal
 
-Adds or updates a set of configuration, documentation, and skill files related to the stoictradingAI ECC bundle.
+Adds or updates the stoictradingAI ECC bundle, including configuration, documentation, skills, rules, and agent definitions.
 
 ## Common Files
 
-- `.claude/commands/ecc-bundle-addition.md`
 - `.claude/commands/team-config-update.md`
+- `.claude/commands/ecc-bundle-addition.md`
 - `.claude/commands/feature-development.md`
 - `.claude/enterprise/controls.md`
 - `.claude/team/stoictradingAI-team-config.json`
@@ -30,8 +30,8 @@ Adds or updates a set of configuration, documentation, and skill files related t
 
 ## Typical Commit Signals
 
-- Add or update .claude/commands/ecc-bundle-addition.md
 - Add or update .claude/commands/team-config-update.md
+- Add or update .claude/commands/ecc-bundle-addition.md
 - Add or update .claude/commands/feature-development.md
 - Add or update .claude/enterprise/controls.md
 - Add or update .claude/team/stoictradingAI-team-config.json
