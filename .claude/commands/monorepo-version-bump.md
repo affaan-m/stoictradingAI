@@ -10,7 +10,7 @@ Use this workflow when working on **monorepo-version-bump** in `stoictradingAI`.
 
 ## Goal
 
-Bump the version across all packages in the monorepo, usually for a new release or pre-release.
+Bumps the version across multiple package.json files in a monorepo, including lerna.json and lock files.
 
 ## Common Files
 
@@ -29,9 +29,9 @@ Bump the version across all packages in the monorepo, usually for a new release 
 
 ## Typical Commit Signals
 
-- Update the version in package.json for all packages (agent, client, docs, all packages in packages/)
-- Update lerna.json with the new version
-- Commit all updated package.json and lerna.json files
+- Update the version in all package.json files under packages/ and root-level package.json files.
+- Update lerna.json version.
+- Commit all updated package.json and lerna.json files, often with a 'bump version' message.
 
 ## Notes
 
