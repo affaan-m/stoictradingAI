@@ -337,7 +337,7 @@ feat: add stoictradingAI ECC bundle (.claude/rules/stoictradingAI-guardrails.md)
 
 ### Ecc Bundle Addition
 
-Adds or updates the stoictradingAI ECC bundle by creating or modifying a set of configuration, command, skill, and rule files.
+Adds or updates the stoictradingAI ECC bundle, which includes configuration, skills, commands, rules, and agent definitions.
 
 **Frequency**: ~3 times per month
 
@@ -396,13 +396,13 @@ Add or update .codex/agents/explorer.toml
 
 ### Team Config Update
 
-Updates the team configuration for stoictradingAI, typically by modifying the team config JSON and related command documentation.
+Updates the team configuration for stoictradingAI, ensuring team settings and permissions are current.
 
 **Frequency**: ~2 times per month
 
 **Steps**:
-1. Modify .claude/team/stoictradingAI-team-config.json
-2. Update .claude/commands/team-config-update.md
+1. Edit .claude/team/stoictradingAI-team-config.json
+2. Optionally update .claude/commands/team-config-update.md
 
 **Files typically involved**:
 - `.claude/team/stoictradingAI-team-config.json`
@@ -410,45 +410,25 @@ Updates the team configuration for stoictradingAI, typically by modifying the te
 
 **Example commit sequence**:
 ```
-Modify .claude/team/stoictradingAI-team-config.json
-Update .claude/commands/team-config-update.md
+Edit .claude/team/stoictradingAI-team-config.json
+Optionally update .claude/commands/team-config-update.md
 ```
 
-### Guardrails Update
+### Add Or Update Guardrails
 
-Updates the guardrails (rules) for stoictradingAI by modifying the guardrails markdown file.
+Adds or updates guardrails (rules) for stoictradingAI to enforce operational or compliance constraints.
 
-**Frequency**: ~3 times per month
+**Frequency**: ~2 times per month
 
 **Steps**:
-1. Edit .claude/rules/stoictradingAI-guardrails.md
+1. Edit or add .claude/rules/stoictradingAI-guardrails.md
 
 **Files typically involved**:
 - `.claude/rules/stoictradingAI-guardrails.md`
 
 **Example commit sequence**:
 ```
-Edit .claude/rules/stoictradingAI-guardrails.md
-```
-
-### Skill Documentation Update
-
-Adds or updates skill documentation for stoictradingAI in both .claude and .agents directories.
-
-**Frequency**: ~2 times per month
-
-**Steps**:
-1. Edit .agents/skills/stoictradingAI/SKILL.md
-2. Edit .claude/skills/stoictradingAI/SKILL.md
-
-**Files typically involved**:
-- `.agents/skills/stoictradingAI/SKILL.md`
-- `.claude/skills/stoictradingAI/SKILL.md`
-
-**Example commit sequence**:
-```
-Edit .agents/skills/stoictradingAI/SKILL.md
-Edit .claude/skills/stoictradingAI/SKILL.md
+Edit or add .claude/rules/stoictradingAI-guardrails.md
 ```
 
 
