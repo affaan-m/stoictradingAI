@@ -40,7 +40,7 @@ Follow these commit message conventions based on 500 analyzed commits.
 
 ### Message Guidelines
 
-- Average message length: ~55 characters
+- Average message length: ~56 characters
 - Keep first line concise and descriptive
 - Use imperative mood ("Add feature" not "Added feature")
 
@@ -332,19 +332,19 @@ Standard feature implementation workflow
 **Example commit sequence**:
 ```
 feat: add stoictradingAI ECC bundle (.codex/agents/docs-researcher.toml)
+feat: add stoictradingAI ECC bundle (.claude/commands/feature-development.md)
 feat: add stoictradingAI ECC bundle (.claude/rules/stoictradingAI-guardrails.md)
-feat: add stoictradingAI ECC bundle (.claude/team/stoictradingAI-team-config.json)
 ```
 
 ### Ecc Bundle Addition
 
-Adds or updates a set of configuration, documentation, and skill files related to the stoictradingAI ECC bundle.
+Adds or updates the stoictradingAI ECC bundle, including configuration, documentation, skills, rules, and agent definitions.
 
-**Frequency**: ~3 times per month
+**Frequency**: ~4 times per month
 
 **Steps**:
-1. Add or update .claude/commands/ecc-bundle-addition.md
-2. Add or update .claude/commands/team-config-update.md
+1. Add or update .claude/commands/team-config-update.md
+2. Add or update .claude/commands/ecc-bundle-addition.md
 3. Add or update .claude/commands/feature-development.md
 4. Add or update .claude/enterprise/controls.md
 5. Add or update .claude/team/stoictradingAI-team-config.json
@@ -360,8 +360,8 @@ Adds or updates a set of configuration, documentation, and skill files related t
 15. Add or update .claude/ecc-tools.json
 
 **Files typically involved**:
-- `.claude/commands/ecc-bundle-addition.md`
 - `.claude/commands/team-config-update.md`
+- `.claude/commands/ecc-bundle-addition.md`
 - `.claude/commands/feature-development.md`
 - `.claude/enterprise/controls.md`
 - `.claude/team/stoictradingAI-team-config.json`
@@ -378,8 +378,8 @@ Adds or updates a set of configuration, documentation, and skill files related t
 
 **Example commit sequence**:
 ```
-Add or update .claude/commands/ecc-bundle-addition.md
 Add or update .claude/commands/team-config-update.md
+Add or update .claude/commands/ecc-bundle-addition.md
 Add or update .claude/commands/feature-development.md
 Add or update .claude/enterprise/controls.md
 Add or update .claude/team/stoictradingAI-team-config.json
@@ -395,64 +395,21 @@ Add or update .claude/skills/stoictradingAI/SKILL.md
 Add or update .claude/ecc-tools.json
 ```
 
-### Team Config Update
+### Command Documentation Addition
 
-Updates the team configuration for stoictradingAI, often as part of a bundle or feature update.
-
-**Frequency**: ~2 times per month
-
-**Steps**:
-1. Edit .claude/team/stoictradingAI-team-config.json
-2. Optionally update related command documentation in .claude/commands/team-config-update.md
-
-**Files typically involved**:
-- `.claude/team/stoictradingAI-team-config.json`
-- `.claude/commands/team-config-update.md`
-
-**Example commit sequence**:
-```
-Edit .claude/team/stoictradingAI-team-config.json
-Optionally update related command documentation in .claude/commands/team-config-update.md
-```
-
-### Guardrails And Research Playbook Update
-
-Updates guardrails and research playbook documentation for stoictradingAI.
+Adds or updates documentation for new or existing commands in the ECC bundle.
 
 **Frequency**: ~2 times per month
 
 **Steps**:
-1. Edit .claude/rules/stoictradingAI-guardrails.md
-2. Edit .claude/research/stoictradingAI-research-playbook.md
+1. Add or update .claude/commands/command-documentation-addition.md
 
 **Files typically involved**:
-- `.claude/rules/stoictradingAI-guardrails.md`
-- `.claude/research/stoictradingAI-research-playbook.md`
+- `.claude/commands/command-documentation-addition.md`
 
 **Example commit sequence**:
 ```
-Edit .claude/rules/stoictradingAI-guardrails.md
-Edit .claude/research/stoictradingAI-research-playbook.md
-```
-
-### Skill Documentation Addition
-
-Adds or updates SKILL.md documentation for stoictradingAI skills in both .agents and .claude directories.
-
-**Frequency**: ~2 times per month
-
-**Steps**:
-1. Add or update .agents/skills/stoictradingAI/SKILL.md
-2. Add or update .claude/skills/stoictradingAI/SKILL.md
-
-**Files typically involved**:
-- `.agents/skills/stoictradingAI/SKILL.md`
-- `.claude/skills/stoictradingAI/SKILL.md`
-
-**Example commit sequence**:
-```
-Add or update .agents/skills/stoictradingAI/SKILL.md
-Add or update .claude/skills/stoictradingAI/SKILL.md
+Add or update .claude/commands/command-documentation-addition.md
 ```
 
 
