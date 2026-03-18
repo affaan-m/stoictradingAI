@@ -10,16 +10,16 @@ Use this workflow when working on **ecc-bundle-addition** in `stoictradingAI`.
 
 ## Goal
 
-Adds a new ECC (Enterprise Control Center) bundle for stoictradingAI, which includes configuration, skills, rules, research playbooks, commands, and agent definitions.
+Adds or updates the stoictradingAI ECC bundle, including commands, rules, skills, team config, research playbook, and agent definitions.
 
 ## Common Files
 
 - `.claude/commands/*.md`
-- `.claude/enterprise/controls.md`
-- `.claude/team/stoictradingAI-team-config.json`
-- `.claude/research/stoictradingAI-research-playbook.md`
 - `.claude/rules/stoictradingAI-guardrails.md`
+- `.claude/skills/stoictradingAI/SKILL.md`
+- `.agents/skills/stoictradingAI/SKILL.md`
 - `.claude/identity.json`
+- `.claude/ecc-tools.json`
 
 ## Suggested Sequence
 
@@ -30,11 +30,11 @@ Adds a new ECC (Enterprise Control Center) bundle for stoictradingAI, which incl
 
 ## Typical Commit Signals
 
-- Create or update .claude/commands/*.md files (e.g., feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, etc.)
-- Create or update .claude/enterprise/controls.md
-- Create or update .claude/team/stoictradingAI-team-config.json
-- Create or update .claude/research/stoictradingAI-research-playbook.md
-- Create or update .claude/rules/stoictradingAI-guardrails.md
+- Add or update .claude/commands/*.md files (such as feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, ecc-bundle-addition.md, dependency-update-multi-package.md, monorepo-version-bump-release.md)
+- Add or update .claude/rules/stoictradingAI-guardrails.md
+- Add or update .claude/skills/stoictradingAI/SKILL.md and/or .agents/skills/stoictradingAI/SKILL.md
+- Add or update .claude/identity.json
+- Add or update .claude/ecc-tools.json
 
 ## Notes
 
