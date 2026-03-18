@@ -9,7 +9,7 @@
   "commandFiles": [
     ".claude/commands/feature-development.md",
     ".claude/commands/ecc-bundle-addition.md",
-    ".claude/commands/monorepo-version-bump.md"
+    ".claude/commands/command-documentation-addition.md"
   ],
-  "updatedAt": "2026-03-18T22:51:56.014Z"
+  "updatedAt": "2026-03-18T22:53:10.245Z"
 }
