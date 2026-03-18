@@ -10,7 +10,7 @@ Use this workflow when working on **command-documentation-addition** in `stoictr
 
 ## Goal
 
-Adds or updates documentation for a new or existing command in the ECC system.
+Adds or updates command documentation files for stoictradingAI ECC bundle.
 
 ## Common Files
 
