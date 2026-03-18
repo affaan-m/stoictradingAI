@@ -10,16 +10,16 @@ Use this workflow when working on **ecc-bundle-addition** in `stoictradingAI`.
 
 ## Goal
 
-Adds or updates the stoictradingAI ECC bundle, including commands, rules, skills, team config, research playbook, and agent definitions.
+Adds a new ECC (Enterprise Control Center) bundle for stoictradingAI, including configuration, documentation, skills, rules, research playbooks, and agent definitions.
 
 ## Common Files
 
-- `.claude/commands/*.md`
-- `.claude/rules/stoictradingAI-guardrails.md`
-- `.claude/skills/stoictradingAI/SKILL.md`
-- `.agents/skills/stoictradingAI/SKILL.md`
-- `.claude/identity.json`
-- `.claude/ecc-tools.json`
+- `.claude/commands/ecc-bundle-addition.md`
+- `.claude/commands/feature-development.md`
+- `.claude/commands/monorepo-version-bump.md`
+- `.claude/commands/multi-package-dependency-update.md`
+- `.claude/enterprise/controls.md`
+- `.claude/team/stoictradingAI-team-config.json`
 
 ## Suggested Sequence
 
@@ -30,11 +30,11 @@ Adds or updates the stoictradingAI ECC bundle, including commands, rules, skills
 
 ## Typical Commit Signals
 
-- Add or update .claude/commands/*.md files (such as feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, ecc-bundle-addition.md, dependency-update-multi-package.md, monorepo-version-bump-release.md)
-- Add or update .claude/rules/stoictradingAI-guardrails.md
-- Add or update .claude/skills/stoictradingAI/SKILL.md and/or .agents/skills/stoictradingAI/SKILL.md
-- Add or update .claude/identity.json
-- Add or update .claude/ecc-tools.json
+- Add or update .claude/commands/ecc-bundle-addition.md
+- Add or update .claude/commands/feature-development.md
+- Add or update .claude/commands/monorepo-version-bump.md and/or multi-package-dependency-update.md
+- Add or update .claude/enterprise/controls.md
+- Add or update .claude/team/stoictradingAI-team-config.json
 
 ## Notes
 
