@@ -10,11 +10,12 @@ Use this workflow when working on **command-documentation-addition** in `stoictr
 
 ## Goal
 
-Adds or updates command documentation files for stoictradingAI ECC bundle.
+Adds or updates documentation for new or existing commands in the ECC bundle.
 
 ## Common Files
 
 - `.claude/commands/command-documentation-addition.md`
+- `.claude/commands/ecc-bundle-addition.md`
 
 ## Suggested Sequence
 
@@ -26,6 +27,7 @@ Adds or updates command documentation files for stoictradingAI ECC bundle.
 ## Typical Commit Signals
 
 - Add or update .claude/commands/command-documentation-addition.md
+- Add or update .claude/commands/ecc-bundle-addition.md
 
 ## Notes
 
