@@ -10,11 +10,10 @@ Use this workflow when working on **team-config-update** in `stoictradingAI`.
 
 ## Goal
 
-Updates the team configuration for stoictradingAI, ensuring team settings and documentation are current.
+Updates the team configuration for stoictradingAI, often alongside ECC bundle or guardrails changes.
 
 ## Common Files
 
-- `.claude/commands/team-config-update.md`
 - `.claude/team/stoictradingAI-team-config.json`
 
 ## Suggested Sequence
@@ -26,8 +25,8 @@ Updates the team configuration for stoictradingAI, ensuring team settings and do
 
 ## Typical Commit Signals
 
-- Edit .claude/commands/team-config-update.md
 - Edit .claude/team/stoictradingAI-team-config.json
+- Optionally update related guardrails, commands, or research playbooks
 
 ## Notes
 
