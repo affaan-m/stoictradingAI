@@ -2,36 +2,30 @@
   "version": "1.3",
   "schemaVersion": "1.0",
   "generatedBy": "ecc-tools",
-  "generatedAt": "2026-03-18T22:59:34.946Z",
+  "generatedAt": "2026-03-18T23:00:14.779Z",
   "repo": "https://github.com/affaan-m/stoictradingAI",
   "profiles": {
-    "requested": "full",
-    "recommended": "full",
-    "effective": "full",
-    "requestedAlias": "full",
-    "recommendedAlias": "full",
-    "effectiveAlias": "full"
+    "requested": "security",
+    "recommended": "security",
+    "effective": "security",
+    "requestedAlias": "security",
+    "recommendedAlias": "security",
+    "effectiveAlias": "security"
   },
-  "requestedProfile": "full",
-  "profile": "full",
-  "recommendedProfile": "full",
-  "effectiveProfile": "full",
+  "requestedProfile": "security",
+  "profile": "security",
+  "recommendedProfile": "security",
+  "effectiveProfile": "security",
   "tier": "enterprise",
   "requestedComponents": [
     "repo-baseline",
     "workflow-automation",
-    "security-audits",
-    "research-tooling",
-    "team-rollout",
-    "governance-controls"
+    "security-audits"
   ],
   "selectedComponents": [
     "repo-baseline",
     "workflow-automation",
-    "security-audits",
-    "research-tooling",
-    "team-rollout",
-    "governance-controls"
+    "security-audits"
   ],
   "requestedAddComponents": [],
   "requestedRemoveComponents": [],
@@ -40,44 +34,29 @@
   "requestedRootPackages": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "selectedRootPackages": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "requestedPackages": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "requestedAddPackages": [],
   "requestedRemovePackages": [],
   "selectedPackages": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "packages": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "blockedRemovalPackages": [],
   "tierFilteredRootPackages": [],
@@ -90,48 +69,27 @@
     ],
     "agentshield-pack": [
       "workflow-pack"
-    ],
-    "research-pack": [
-      "workflow-pack"
-    ],
-    "team-config-sync": [
-      "runtime-core"
-    ],
-    "enterprise-controls": [
-      "team-config-sync"
     ]
   },
   "resolutionOrder": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "requestedModules": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "selectedModules": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "modules": [
     "runtime-core",
     "workflow-pack",
-    "agentshield-pack",
-    "research-pack",
-    "team-config-sync",
-    "enterprise-controls"
+    "agentshield-pack"
   ],
   "managedFiles": [
     ".claude/skills/stoictradingAI/SKILL.md",
@@ -145,12 +103,9 @@
     ".codex/agents/docs-researcher.toml",
     ".claude/homunculus/instincts/inherited/stoictradingAI-instincts.yaml",
     ".claude/rules/stoictradingAI-guardrails.md",
-    ".claude/research/stoictradingAI-research-playbook.md",
-    ".claude/team/stoictradingAI-team-config.json",
-    ".claude/enterprise/controls.md",
     ".claude/commands/feature-development.md",
     ".claude/commands/ecc-bundle-addition.md",
-    ".claude/commands/team-config-update.md"
+    ".claude/commands/command-documentation-addition.md"
   ],
   "packageFiles": {
     "runtime-core": [
@@ -168,19 +123,10 @@
     "agentshield-pack": [
       ".claude/rules/stoictradingAI-guardrails.md"
     ],
-    "research-pack": [
-      ".claude/research/stoictradingAI-research-playbook.md"
-    ],
-    "team-config-sync": [
-      ".claude/team/stoictradingAI-team-config.json"
-    ],
-    "enterprise-controls": [
-      ".claude/enterprise/controls.md"
-    ],
     "workflow-pack": [
       ".claude/commands/feature-development.md",
       ".claude/commands/ecc-bundle-addition.md",
-      ".claude/commands/team-config-update.md"
+      ".claude/commands/command-documentation-addition.md"
     ]
   },
   "moduleFiles": {
@@ -199,19 +145,10 @@
     "agentshield-pack": [
       ".claude/rules/stoictradingAI-guardrails.md"
     ],
-    "research-pack": [
-      ".claude/research/stoictradingAI-research-playbook.md"
-    ],
-    "team-config-sync": [
-      ".claude/team/stoictradingAI-team-config.json"
-    ],
-    "enterprise-controls": [
-      ".claude/enterprise/controls.md"
-    ],
     "workflow-pack": [
       ".claude/commands/feature-development.md",
       ".claude/commands/ecc-bundle-addition.md",
-      ".claude/commands/team-config-update.md"
+      ".claude/commands/command-documentation-addition.md"
     ]
   },
   "files": [
@@ -271,21 +208,6 @@
       "description": "Repository guardrails distilled from analysis for security and workflow review."
     },
     {
-      "moduleId": "research-pack",
-      "path": ".claude/research/stoictradingAI-research-playbook.md",
-      "description": "Research workflow playbook for source attribution and long-context tasks."
-    },
-    {
-      "moduleId": "team-config-sync",
-      "path": ".claude/team/stoictradingAI-team-config.json",
-      "description": "Team config scaffold that points collaborators at the shared ECC bundle."
-    },
-    {
-      "moduleId": "enterprise-controls",
-      "path": ".claude/enterprise/controls.md",
-      "description": "Enterprise governance scaffold for approvals, audit posture, and escalation."
-    },
-    {
       "moduleId": "workflow-pack",
       "path": ".claude/commands/feature-development.md",
       "description": "Workflow command scaffold for feature-development."
@@ -297,8 +219,8 @@
     },
     {
       "moduleId": "workflow-pack",
-      "path": ".claude/commands/team-config-update.md",
-      "description": "Workflow command scaffold for team-config-update."
+      "path": ".claude/commands/command-documentation-addition.md",
+      "description": "Workflow command scaffold for command-documentation-addition."
     }
   ],
   "workflows": [
@@ -311,8 +233,8 @@
       "path": ".claude/commands/ecc-bundle-addition.md"
     },
     {
-      "command": "team-config-update",
-      "path": ".claude/commands/team-config-update.md"
+      "command": "command-documentation-addition",
+      "path": ".claude/commands/command-documentation-addition.md"
     }
   ],
   "adapters": {
@@ -322,7 +244,7 @@
       "commandPaths": [
         ".claude/commands/feature-development.md",
         ".claude/commands/ecc-bundle-addition.md",
-        ".claude/commands/team-config-update.md"
+        ".claude/commands/command-documentation-addition.md"
       ]
     },
     "codex": {
