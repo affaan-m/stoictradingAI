@@ -10,7 +10,7 @@ Use this workflow when working on **ecc-bundle-addition** in `stoictradingAI`.
 
 ## Goal
 
-Adds or updates a new ECC bundle for stoictradingAI, including commands, configuration, skills, research, rules, and agent definitions.
+Adds or updates the stoictradingAI ECC bundle, including configuration, documentation, rules, skills, and agent definitions.
 
 ## Common Files
 
