@@ -2,7 +2,7 @@
   "version": "1.3",
   "schemaVersion": "1.0",
   "generatedBy": "ecc-tools",
-  "generatedAt": "2026-03-18T22:51:14.718Z",
+  "generatedAt": "2026-03-18T22:51:56.014Z",
   "repo": "https://github.com/affaan-m/stoictradingAI",
   "profiles": {
     "requested": "full",
@@ -149,8 +149,8 @@
     ".claude/team/stoictradingAI-team-config.json",
     ".claude/enterprise/controls.md",
     ".claude/commands/feature-development.md",
-    ".claude/commands/monorepo-version-bump.md",
-    ".claude/commands/multi-package-dependency-update.md"
+    ".claude/commands/ecc-bundle-addition.md",
+    ".claude/commands/monorepo-version-bump.md"
   ],
   "packageFiles": {
     "runtime-core": [
@@ -179,8 +179,8 @@
     ],
     "workflow-pack": [
       ".claude/commands/feature-development.md",
-      ".claude/commands/monorepo-version-bump.md",
-      ".claude/commands/multi-package-dependency-update.md"
+      ".claude/commands/ecc-bundle-addition.md",
+      ".claude/commands/monorepo-version-bump.md"
     ]
   },
   "moduleFiles": {
@@ -210,8 +210,8 @@
     ],
     "workflow-pack": [
       ".claude/commands/feature-development.md",
-      ".claude/commands/monorepo-version-bump.md",
-      ".claude/commands/multi-package-dependency-update.md"
+      ".claude/commands/ecc-bundle-addition.md",
+      ".claude/commands/monorepo-version-bump.md"
     ]
   },
   "files": [
@@ -292,13 +292,13 @@
     },
     {
       "moduleId": "workflow-pack",
-      "path": ".claude/commands/monorepo-version-bump.md",
-      "description": "Workflow command scaffold for monorepo-version-bump."
+      "path": ".claude/commands/ecc-bundle-addition.md",
+      "description": "Workflow command scaffold for ecc-bundle-addition."
     },
     {
       "moduleId": "workflow-pack",
-      "path": ".claude/commands/multi-package-dependency-update.md",
-      "description": "Workflow command scaffold for multi-package-dependency-update."
+      "path": ".claude/commands/monorepo-version-bump.md",
+      "description": "Workflow command scaffold for monorepo-version-bump."
     }
   ],
   "workflows": [
@@ -307,12 +307,12 @@
       "path": ".claude/commands/feature-development.md"
     },
     {
-      "command": "monorepo-version-bump",
-      "path": ".claude/commands/monorepo-version-bump.md"
+      "command": "ecc-bundle-addition",
+      "path": ".claude/commands/ecc-bundle-addition.md"
     },
     {
-      "command": "multi-package-dependency-update",
-      "path": ".claude/commands/multi-package-dependency-update.md"
+      "command": "monorepo-version-bump",
+      "path": ".claude/commands/monorepo-version-bump.md"
     }
   ],
   "adapters": {
@@ -321,8 +321,8 @@
       "identityPath": ".claude/identity.json",
       "commandPaths": [
         ".claude/commands/feature-development.md",
-        ".claude/commands/monorepo-version-bump.md",
-        ".claude/commands/multi-package-dependency-update.md"
+        ".claude/commands/ecc-bundle-addition.md",
+        ".claude/commands/monorepo-version-bump.md"
       ]
     },
     "codex": {
