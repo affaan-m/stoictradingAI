@@ -10,16 +10,16 @@ Use this workflow when working on **ecc-bundle-addition** in `stoictradingAI`.
 
 ## Goal
 
-Adds a new ECC (Enterprise Control Center) bundle for stoictradingAI, including configuration, documentation, skills, rules, research playbooks, and agent definitions.
+Adds or updates an ECC (Enterprise Control Center) bundle for stoictradingAI, including configuration, documentation, guardrails, skills, and agent definitions.
 
 ## Common Files
 
 - `.claude/commands/ecc-bundle-addition.md`
 - `.claude/commands/feature-development.md`
-- `.claude/commands/monorepo-version-bump.md`
-- `.claude/commands/multi-package-dependency-update.md`
+- `.claude/commands/command-documentation-addition.md`
 - `.claude/enterprise/controls.md`
 - `.claude/team/stoictradingAI-team-config.json`
+- `.claude/research/stoictradingAI-research-playbook.md`
 
 ## Suggested Sequence
 
@@ -32,7 +32,7 @@ Adds a new ECC (Enterprise Control Center) bundle for stoictradingAI, including 
 
 - Add or update .claude/commands/ecc-bundle-addition.md
 - Add or update .claude/commands/feature-development.md
-- Add or update .claude/commands/monorepo-version-bump.md and/or multi-package-dependency-update.md
+- Add or update .claude/commands/command-documentation-addition.md
 - Add or update .claude/enterprise/controls.md
 - Add or update .claude/team/stoictradingAI-team-config.json
 
