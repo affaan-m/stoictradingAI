@@ -10,11 +10,11 @@ Use this workflow when working on **command-documentation-addition** in `stoictr
 
 ## Goal
 
-Adds or updates markdown documentation for ECC-related commands.
+Adds or updates documentation for commands related to stoictradingAI ECC bundles.
 
 ## Common Files
 
-- `.claude/commands/*.md`
+- `.claude/commands/command-documentation-addition.md`
 
 ## Suggested Sequence
 
@@ -25,7 +25,7 @@ Adds or updates markdown documentation for ECC-related commands.
 
 ## Typical Commit Signals
 
-- Create or update a markdown file in .claude/commands/ (e.g., feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, ecc-bundle-addition.md, dependency-update-multi-package.md, monorepo-version-bump-release.md)
+- Add or update .claude/commands/command-documentation-addition.md
 
 ## Notes
 
