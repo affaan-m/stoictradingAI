@@ -10,16 +10,16 @@ Use this workflow when working on **ecc-bundle-addition** in `stoictradingAI`.
 
 ## Goal
 
-Adds or updates the stoictradingAI ECC bundle, including configuration, documentation, skills, rules, and agent definitions.
+Adds or updates a set of ECC (Enterprise Control Center) bundle files for the stoictradingAI project, including commands, skills, configuration, and guardrails.
 
 ## Common Files
 
-- `.claude/commands/team-config-update.md`
 - `.claude/commands/ecc-bundle-addition.md`
 - `.claude/commands/feature-development.md`
-- `.claude/enterprise/controls.md`
-- `.claude/team/stoictradingAI-team-config.json`
-- `.claude/research/stoictradingAI-research-playbook.md`
+- `.claude/commands/team-config-update.md`
+- `.claude/rules/stoictradingAI-guardrails.md`
+- `.claude/identity.json`
+- `.claude/skills/stoictradingAI/SKILL.md`
 
 ## Suggested Sequence
 
@@ -30,11 +30,11 @@ Adds or updates the stoictradingAI ECC bundle, including configuration, document
 
 ## Typical Commit Signals
 
-- Add or update .claude/commands/team-config-update.md
-- Add or update .claude/commands/ecc-bundle-addition.md
-- Add or update .claude/commands/feature-development.md
-- Add or update .claude/enterprise/controls.md
-- Add or update .claude/team/stoictradingAI-team-config.json
+- Create or update .claude/commands/ecc-bundle-addition.md
+- Create or update .claude/commands/feature-development.md
+- Create or update .claude/commands/team-config-update.md
+- Create or update .claude/rules/stoictradingAI-guardrails.md
+- Create or update .claude/identity.json
 
 ## Notes
 
