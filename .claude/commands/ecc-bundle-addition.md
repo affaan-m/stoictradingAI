@@ -10,16 +10,16 @@ Use this workflow when working on **ecc-bundle-addition** in `stoictradingAI`.
 
 ## Goal
 
-Adds a new ECC (Enterprise Control Center) bundle or configuration/documentation file for stoictradingAI, typically in .claude, .codex, or .agents directories.
+Adds a new ECC (Enterprise Control Center) bundle for stoictradingAI, which includes configuration, skills, rules, research playbooks, commands, and agent definitions.
 
 ## Common Files
 
 - `.claude/commands/*.md`
-- `.claude/enterprise/*.md`
-- `.claude/team/*.json`
-- `.claude/research/*.md`
-- `.claude/rules/*.md`
-- `.claude/skills/stoictradingAI/SKILL.md`
+- `.claude/enterprise/controls.md`
+- `.claude/team/stoictradingAI-team-config.json`
+- `.claude/research/stoictradingAI-research-playbook.md`
+- `.claude/rules/stoictradingAI-guardrails.md`
+- `.claude/identity.json`
 
 ## Suggested Sequence
 
@@ -30,8 +30,11 @@ Adds a new ECC (Enterprise Control Center) bundle or configuration/documentation
 
 ## Typical Commit Signals
 
-- Create or update a file in .claude/commands, .claude/enterprise, .claude/team, .claude/research, .claude/rules, .claude/skills, .codex/agents, .codex, or .agents/skills/stoictradingAI.
-- Commit the new or updated file with a message referencing 'ECC bundle'.
+- Create or update .claude/commands/*.md files (e.g., feature-development.md, monorepo-version-bump.md, multi-package-dependency-update.md, etc.)
+- Create or update .claude/enterprise/controls.md
+- Create or update .claude/team/stoictradingAI-team-config.json
+- Create or update .claude/research/stoictradingAI-research-playbook.md
+- Create or update .claude/rules/stoictradingAI-guardrails.md
 
 ## Notes
 
