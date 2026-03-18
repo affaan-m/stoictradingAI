@@ -10,13 +10,14 @@ Use this workflow when working on **multi-package-dependency-update** in `stoict
 
 ## Goal
 
-Update dependencies across multiple package.json files in different packages, often using an automated tool like dependabot.
+Updates dependencies across multiple package.json files in a monorepo, typically using an automated tool like Dependabot.
 
 ## Common Files
 
 - `packages/*/package.json`
 - `scripts/*/pnpm-lock.yaml`
-- `pnpm-lock.yaml`
+- `scripts/*/yarn.lock`
+- `scripts/*/package-lock.json`
 
 ## Suggested Sequence
 
@@ -27,9 +28,10 @@ Update dependencies across multiple package.json files in different packages, of
 
 ## Typical Commit Signals
 
-- Update dependencies in package.json for affected packages
-- Update lockfile (pnpm-lock.yaml or similar)
-- Commit all changed package.json and lockfile files
+- Identify outdated dependencies across multiple packages.
+- Update package.json files in each affected package directory.
+- Update lock files (e.g., pnpm-lock.yaml, yarn.lock, package-lock.json) as needed.
+- Commit all changes with a detailed message listing updated dependencies and versions.
 
 ## Notes
 
