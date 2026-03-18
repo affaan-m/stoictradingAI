@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "generatedBy": "ecc-tools",
+  "profile": "full",
+  "sharedSkills": [
+    ".claude/skills/stoictradingAI/SKILL.md",
+    ".agents/skills/stoictradingAI/SKILL.md"
+  ],
+  "commandFiles": [
+    ".claude/commands/feature-development.md",
+    ".claude/commands/dependency-update-multi-package.md",
+    ".claude/commands/monorepo-version-bump-release.md"
+  ],
+  "updatedAt": "2026-03-18T22:50:22.957Z"
+}
